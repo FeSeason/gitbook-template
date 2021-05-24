@@ -1,5 +1,5 @@
 variables:
-  STATIC: "/ci-data/fe-statics/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME"
+  STATIC: "/ci-data1/fe-statics/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME"
   STATIC_FAT: "/ci-data/fe-statics/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME-fat"
   STATIC_UAT: "/ci-data/fe-statics/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME-uat"
   DEVELOP_STATIC: "/ci-data/fe-statics-fat/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME"
@@ -41,6 +41,6 @@ deploy:
     - echo deploy fat
     - rm -rf $STATIC_FAT
     - cp -r $OUTPUT_FOLDER $STATIC_FAT
-  
+
   only:
     - master
